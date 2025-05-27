@@ -17,6 +17,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<ISP_AddUpdRolesRepository, SqlSP_AddUpdRolesRepository>();
 
+builder.Services.AddScoped<ISP_AddUpdUserRolesRepository, SqlSP_AddUpdUserRolesRepository>();
+
+builder.Services.AddScoped<ISP_AddUpdUsersRepository, SqlSP_AddUpdUsersRepository>();
+
+builder.Services.AddScoped<ISP_AddUpdWorkoutPlansRepository, SqlSP_AddUpdWorkoutPlansRepository>();
+
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
 var app = builder.Build();
