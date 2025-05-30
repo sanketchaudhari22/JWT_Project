@@ -13,10 +13,6 @@ namespace JWT_Project.Mapping
             {
 
                 CreateMap<ApiResponseMessage , ApiResponseMessageDto>().ReverseMap();
-                CreateMap<GET_Roles, GET_RolesDto>().ReverseMap();
-                CreateMap<GET_UserRoles, GET_UserRolesDto>().ReverseMap();  
-                CreateMap<GET_Users, GET_UsersDto>().ReverseMap();    
-                CreateMap<GET_WorkoutPlans, GET_WorkoutPlansDto>().ReverseMap();
             }
         }
     }
