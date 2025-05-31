@@ -1,6 +1,7 @@
 ﻿using JWT_Project.Data;
 using JWT_Project.Model.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace JWT_Project.Repository
 {
@@ -24,11 +25,11 @@ namespace JWT_Project.Repository
                     {
                         list.Add(new GET_WorkoutPlans
                         {
-                            ID = reader.GetString(reader.GetOrdinal("ID")),
-                            PLANNAME = reader.GetString(reader.GetOrdinal("PLANNAME")),
-                            DESCRIPTION = reader.GetString(reader.GetOrdinal("DESCRIPTION")),
-                            MEMBERID = reader.GetInt32(reader.GetOrdinal("MEMBERID")),
-                            CREATEDAT = reader.GetString(reader.GetOrdinal("CREATEDAT")),
+                            ID = reader.GetString("ID"),
+                            PLANNAME = reader.GetString("PLANNAME"),
+                            DESCRIPTION = reader.GetString("DESCRIPTION"),
+                            MEMBERID = reader.GetInt32("MEMBERID"),
+                            CREATEDAT = reader.GetString("CREATEDAT"),
 
 
                         });

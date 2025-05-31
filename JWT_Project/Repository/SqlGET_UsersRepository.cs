@@ -1,6 +1,7 @@
 ﻿using JWT_Project.Data;
 using JWT_Project.Model.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace JWT_Project.Repository
 {
@@ -24,11 +25,11 @@ namespace JWT_Project.Repository
                     {
                         list.Add(new GET_Users
                         {
-                            ID = reader.GetString(reader.GetOrdinal("ID")),
-                            USERNAME = reader.GetString(reader.GetOrdinal("USERNAME")),
-                            PASSWORD = reader.GetString(reader.GetOrdinal("PASSWORD")),
-                            ROLE = reader.GetString(reader.GetOrdinal("ROLE")),
-                            CREATEDAT = reader.GetString(reader.GetOrdinal("CREATEDAT")),
+                            ID = reader.GetString("ID"),
+                            USERNAME = reader.GetString("USERNAME"),
+                            PASSWORD = reader.GetString("PASSWORD"),
+                            ROLE = reader.GetString("ROLE"),
+                            CREATEDAT = reader.GetString("CREATEDAT"),
 
 
                         });
