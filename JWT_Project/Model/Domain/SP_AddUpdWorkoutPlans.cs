@@ -2,7 +2,7 @@
 {
     public class SP_AddUpdWorkoutPlans
     {
-        public int ID			 { get; set; }
+        public string ID			 { get; set; }
         public string PLANNAME	 { get; set; }
         public string DESCRIPTION { get; set; }
         public int TRAINERID	 { get; set; }

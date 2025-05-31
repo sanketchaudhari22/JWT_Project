@@ -2,6 +2,6 @@
 {
     public class GET_RolesDomain
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

@@ -2,6 +2,6 @@
 {
     public class SP_DeleteRoles
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

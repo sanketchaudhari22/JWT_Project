@@ -24,7 +24,7 @@ namespace JWT_Project.Repository
                     {
                         list.Add(new GET_WorkoutPlans
                         {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                            ID = reader.GetString(reader.GetOrdinal("ID")),
                             PLANNAME = reader.GetString(reader.GetOrdinal("PLANNAME")),
                             DESCRIPTION = reader.GetString(reader.GetOrdinal("DESCRIPTION")),
                             MEMBERID = reader.GetInt32(reader.GetOrdinal("MEMBERID")),

@@ -2,6 +2,6 @@
 {
     public class GET_WorkoutPlansDomain
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

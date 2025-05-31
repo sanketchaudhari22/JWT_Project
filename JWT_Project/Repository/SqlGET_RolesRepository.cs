@@ -1,6 +1,7 @@
 ﻿using JWT_Project.Data;
 using JWT_Project.Model.Domain;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace JWT_Project.Repository
 {
@@ -17,7 +18,7 @@ namespace JWT_Project.Repository
             List<GET_Roles> list = new List<GET_Roles>();
             using (var command = dbContext.Database.GetDbConnection().CreateCommand())
             {
-                command.CommandText = "SELECT TOP 20 * FROM[GET_Roles]( '" + input.ID + "' )ORDER BY ID DESC";
+                command.CommandText = "SELECT  * FROM[GET_Roles] ( '" + input.ID + "' )ORDER BY ID DESC";
                 dbContext.Database.OpenConnection();
                 using (var reader = await command.ExecuteReaderAsync())
                 {
@@ -25,8 +26,8 @@ namespace JWT_Project.Repository
                     {
                         list.Add(new GET_Roles
                         {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
-                            Name = reader.GetString(reader.GetOrdinal("Name")),
+                            ID = reader.GetString("ID"),
+                            Name = reader.GetString("Name")
 
 
                         });

@@ -2,7 +2,7 @@
 {
     public class SP_AddUpdUsers
     {
-        public int ID			 { get; set; }
+        public string ID			 { get; set; }
         public string USERNAME	 { get; set; }
         public string PASSWORD	 { get; set; }
         public string ROLE		 { get; set; }

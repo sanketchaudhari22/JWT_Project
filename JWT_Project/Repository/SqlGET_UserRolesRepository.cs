@@ -26,7 +26,7 @@ namespace JWT_Project.Repository
                     {
                         list.Add(new GET_UserRoles
                         {
-                            ID = reader.GetInt32(reader.GetOrdinal("ID")),
+                            ID = reader.GetString(reader.GetOrdinal("ID")),
                             USERID = reader.GetString(reader.GetOrdinal("USERID")),
                             ROLEID = reader.GetString(reader.GetOrdinal("ROLEID")),
 

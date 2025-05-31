@@ -2,6 +2,6 @@
 {
     public class GET_UsersDomain
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

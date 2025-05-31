@@ -2,7 +2,7 @@
 {
     public class SP_AddUpdRoles
     {
-        public int ID  { get; set; }
+        public string ID  { get; set; }
         public string NAME { get; set; }
     }
 }
