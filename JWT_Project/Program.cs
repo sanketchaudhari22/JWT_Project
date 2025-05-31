@@ -1,4 +1,5 @@
 using JWT_Project.Data;
+using JWT_Project.Model.Domain;
 using JWT_Project.Repository;
 using Microsoft.EntityFrameworkCore;
 using static JWT_Project.Mapping.AutoMappingProfile;
@@ -24,6 +25,10 @@ builder.Services.AddScoped<ISP_AddUpdUsersRepository, SqlSP_AddUpdUsersRepositor
 builder.Services.AddScoped<ISP_AddUpdWorkoutPlansRepository, SqlSP_AddUpdWorkoutPlansRepository>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+builder.Services.AddScoped<IGET_RolesRepository, SqlGET_RolesRepository>();
+builder.Services.AddScoped<IGET_UserRolesRepository, SqlGET_UserRolesRepository>();
+builder.Services.AddScoped<IGET_UsersRepository, SqlGET_UsersRepository>();
+builder.Services.AddScoped<IGET_WorkoutPlansRepository, SqlGET_WorkoutPlansRepository>();
 
 var app = builder.Build();
 
