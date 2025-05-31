@@ -29,6 +29,10 @@ builder.Services.AddScoped<IGET_RolesRepository, SqlGET_RolesRepository>();
 builder.Services.AddScoped<IGET_UserRolesRepository, SqlGET_UserRolesRepository>();
 builder.Services.AddScoped<IGET_UsersRepository, SqlGET_UsersRepository>();
 builder.Services.AddScoped<IGET_WorkoutPlansRepository, SqlGET_WorkoutPlansRepository>();
+builder.Services.AddScoped<ISP_DeleteRolesRepository,SqlSP_DeleteRolesRepository>();
+builder.Services.AddScoped<ISP_DeleteUserRolesRepository, SqlSP_DeleteUserRolesRepository>();
+builder.Services.AddScoped<ISP_DeleteUsersRepository, SqlSP_DeleteUsersRepository>();
+builder.Services.AddScoped<ISP_DeleteWorkoutPlansRepository,SqlSP_DeleteWorkoutPlansRepository>();
 
 var app = builder.Build();
 

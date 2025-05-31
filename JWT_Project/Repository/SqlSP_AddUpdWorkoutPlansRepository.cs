@@ -20,35 +20,37 @@ namespace JWT_Project.Repository
                 command.CommandText = "[SP_AddUpdWorkoutPlans]";
                 command.CommandType = System.Data.CommandType.StoredProcedure;
 
-                var parameter = command.CreateParameter();
-                parameter.ParameterName = "@ID";
-                parameter.Value = input.ID;
-                command.Parameters.Add(parameter);
-                parameter = command.CreateParameter();
+                var parameter1 = command.CreateParameter();
+                parameter1.ParameterName = "@ID";
+                parameter1.Value = input.ID;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
 
-                parameter.ParameterName = "@PLANNAME";
-                parameter.Value = input.PLANNAME;
-                command.Parameters.Add(parameter);
-                parameter = command.CreateParameter();
+                parameter1.ParameterName = "@PLANNAME";
+                parameter1.Value = input.PLANNAME;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
 
-                parameter.ParameterName = "@DESCRIPTION";
-                parameter.Value = input.DESCRIPTION;
-                command.Parameters.Add(parameter);
-                parameter = command.CreateParameter();
+                parameter1.ParameterName = "@DESCRIPTION";
+                parameter1.Value = input.DESCRIPTION;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
 
-                parameter.ParameterName = "@TRAINERID";
-                parameter.Value = input.TRAINERID;
-                command.Parameters.Add(parameter);
-                parameter = command.CreateParameter();
+                parameter1.ParameterName = "@TRAINERID";
+                parameter1.Value = input.TRAINERID;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
 
-                parameter.ParameterName = "@MEMBERID";
-                parameter.Value = input.MEMBERID;
-                command.Parameters.Add(parameter);
-                dbContext.Database.OpenConnection();
+                parameter1.ParameterName = "@MEMBERID";
+                parameter1.Value = input.MEMBERID;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
 
-                parameter.ParameterName = "@CREATEDAT";
-                parameter.Value = input.CREATEDAT;
-                command.Parameters.Add(parameter);
+                parameter1.ParameterName = "@CREATEDAT";
+                parameter1.Value = input.CREATEDAT;
+                command.Parameters.Add(parameter1);
+                parameter1 = command.CreateParameter();
+
                 dbContext.Database.OpenConnection();
 
                 using (var reader = await command.ExecuteReaderAsync())
