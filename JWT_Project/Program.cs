@@ -1,6 +1,7 @@
 using JWT_Project.Data;
 using JWT_Project.Model.Domain;
 using JWT_Project.Repository;
+using JWT_Project.Services;
 using Microsoft.EntityFrameworkCore;
 using static JWT_Project.Mapping.AutoMappingProfile;
 
@@ -33,6 +34,11 @@ builder.Services.AddScoped<ISP_DeleteRolesRepository,SqlSP_DeleteRolesRepository
 builder.Services.AddScoped<ISP_DeleteUserRolesRepository, SqlSP_DeleteUserRolesRepository>();
 builder.Services.AddScoped<ISP_DeleteUsersRepository, SqlSP_DeleteUsersRepository>();
 builder.Services.AddScoped<ISP_DeleteWorkoutPlansRepository,SqlSP_DeleteWorkoutPlansRepository>();
+builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<UserService>();
+
+
+
 
 var app = builder.Build();
 
