@@ -1,6 +1,8 @@
 ﻿using JWT_Project.Model.Domain;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace JWT_Project.Repository;
 
@@ -28,11 +30,12 @@ public class UserService
                 {
                     var dbUser = new GET_Users
                     {
-                        ID = reader["ID"].ToString(),
-                        USERNAME = reader["USERNAME"].ToString(),
-                        PASSWORD = reader["PASSWORD"].ToString(),
-                        ROLE = reader["ROLE"].ToString(),
-                        CREATEDAT = reader["CREATEDAT"].ToString()
+                        ID = reader.GetString("ID"),
+                        USERNAME = reader.GetString("USERNAME"),
+                        PASSWORD = reader.GetString("PASSWORD"),
+                        ROLE = reader.GetString("ROLE"),
+                        CREATEDAT = reader.GetString("CREATEDAT"),
+                     
                     };
 
                     if (dbUser.USERNAME == username)
