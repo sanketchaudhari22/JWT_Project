@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JWT_Project.Repository;
 
-    public class UserService
-    {
-        private readonly IConfiguration _configuration;
+public class UserService
+{
+    private readonly IConfiguration _configuration;
 
-        public UserService(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+    public UserService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
 
     public GET_Users GetUserByUsername(string username)
     {
@@ -42,5 +42,4 @@ namespace JWT_Project.Repository;
         }
         return null;
     }
-    }
-
+}
